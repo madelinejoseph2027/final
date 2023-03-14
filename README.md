@@ -1,6 +1,9 @@
 # THE FINAL
 
 ## In a nutshell
+
+This evolutionary process is comprised of a set of pybullet/pyrosim-based functions that evolves a 3-dimensional robot, comprised of randomly sized, sensorized, and motorized rectangular pieces, that is capable of moving away from its point of origin.
+
 "Educational" Video: https://www.youtube.com/watch?v=7oJAp_oXcQE
 
 **Cartoon here**
@@ -24,15 +27,14 @@ For computational efficiency, the algorithm is set to evolve 50 generations of c
 
 
 ## Brain/Body Generation
-This evolutionary process is comprised of a set of pybullet/pyrosim-based functions that evolves a 3-dimensional robot, comprised of randomly sized, sensorized, and motorized rectangular pieces, that is capable of moving away from its point of origin.
-
-**In the constructor, Create_Body, and Create_Brain functions of ```solution.py```:**
-
+*In the constructor, Create_Body, and Create_Brain functions of ```solution.py```:*
 The algorithm generates a creature by randomly instantiating a thoracic length of 2 to 5 links. The links' dimensions can range in size from 0.1 to 3.0 units. The algorithm then adds "limbs" into x, y, and z directions. These segments are random in size, but are **bilaterally symmetric** (to mimic most animals), such that if a "limb" exists on one side of the robot, its mirror image exists on the other. Sensors, motors, and synaptic weights are assigned at random based on a coin toss (boolean variable randomly set to 0 or 1).
 
-The following diagram shows an example robot. Green links are sensorized, while blue are unsensorized. Green joints are motorized, while blue are unmotorized (this wouldn't actually be reflected in the output – joints are not colored). Synapses are active if they connect to a sensorized link with a motorized joint. A synapse that connects an unsensorized and/or unmotorized joints is inactive. The mirror plane, which defines the bilateral symmetry of the robot, runs perpendicular to the viewer's line of vision. 
 
 ![Body-Brain Diagram](https://user-images.githubusercontent.com/122245493/220243994-f18b9ff8-2993-41eb-a7e1-76335d226b88.jpg)
+
+The diagram above shows an example robot. Green links are sensorized, while blue are unsensorized. Green joints are motorized, while blue are unmotorized (this wouldn't actually be reflected in the output – joints are not colored). Synapses are active if they connect to a sensorized link with a motorized joint. A synapse that connects an unsensorized and/or unmotorized joints is inactive. The mirror plane, which defines the bilateral symmetry of the robot, runs perpendicular to the viewer's line of vision. 
+
 
 ## Mutation & Selection
 The algorithm evolves horses optimized for locomotion using the parallel hillclimber model. In brief, an initial random parent is generated and then cloned. The cloned child will be mutated in one way. To prevent confounding changes (i.e., combinations of changes whose effects' origin can not be deconvoluted from the multiple changes), **either** the body or brain of the child is mutated. A coin toss determines if the brain or body is varied. If the brain is varied, a secondary coin toss determines if a sensor or synaptic weight is changed. If the body is varied, that secondary coin toss determines if a section is added or removed. The parent and mutated child are then "competed" against each other based on some metric of fitness. Whichever individual has the superior fitness is preserved for further mutation and competition, while the other is discarded. In this instance, locomotion to the right (measured as average x-position of the leftmost legs) is the fitness function. The following diagram shows the basic scheme of the evolutionary algorithm. 
