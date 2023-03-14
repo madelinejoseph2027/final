@@ -32,7 +32,7 @@ The algorithm generates a creature by randomly instantiating a thoracic length o
 ![PhenoGenotype_Map](https://user-images.githubusercontent.com/122245493/225149139-97b5f271-38fd-4d1f-a1de-a0d331399d82.png)
 
 
-The diagram above shows an example robot. Green links are sensorized, while blue are unsensorized. Green joints are motorized, while blue are unmotorized (this wouldn't actually be reflected in the output – joints are not colored). Synapses are active if they connect to a sensorized link with a motorized joint. A synapse that connects an unsensorized and/or unmotorized joints is inactive. The mirror plane, which defines the bilateral symmetry of the robot, runs perpendicular to the viewer's line of vision. 
+The diagram above shows an example robot. The genotype consists of the random variables detailed previously. The phenotype describes the corresponding morphology. Green links are sensorized, while blue are unsensorized. Green joints are motorized, while blue are unmotorized (this wouldn't actually be reflected in the output – joints are not colored). Synapses are active if they connect to a sensorized link with a motorized joint. A synapse that connects an unsensorized and/or unmotorized joints is inactive. The mirror plane, which defines the bilateral symmetry of the robot, runs perpendicular to the viewer's line of vision. 
 
 
 ## Mutation & Selection
