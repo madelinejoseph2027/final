@@ -21,9 +21,9 @@ python3 search.py
 
 ## Output
 
-For computational efficiency, the algorithm is set to evolve 50 generations of creatures from an initial population of 1 random parent. The initial parent (generation 0) will be displayed in the pybullet GUI. After the evolution process completes, the single best individual will be displayed in the GUI. The number of generations and the population size can be changed in ```constants.py``` as desired.
+For computational efficiency, the algorithm is set to evolve 50 generations of creatures from an initial population of 1 random parent. The initial parent (generation 0) will be displayed in the pybullet GUI. After the evolution process completes, the single best individual will be displayed in the GUI (see the Show_Best function in ```parallelHillClimber.py```). The number of generations and the population size can be changed in ```constants.py``` as desired.
 
-**The text file "BestFitnesses.txt" contains a comma-separated list of the fitnesses of the best individual in a population for each generation.**
+**The text file "BestFitnesses.txt" contains a comma-separated list of the fitnesses of the best individual in a population for each generation.** This file is updated upon each new evolutionary run via the Preserve_Best function in ```parallelHillClimber.py```.
 
 
 ## Brain/Body Generation
@@ -44,7 +44,7 @@ The algorithm evolves horses optimized for locomotion using the **parallel hillc
 A coin toss determines if the brain or body is varied. If the brain is varied, a secondary coin toss determines if a sensor or synaptic weight is changed. If the body is varied, that secondary coin toss determines if a section is added or removed. 
 
 
-*In the constructor, Create_Body, and Create_Brain functions of ```solution.py```:*
+*In the Evolve, Evolve_For_One_Generation, Spawn, Mutate and Select functions of ```parallelHillClimber.py```:*
 Locomotion to the right (measured as average x-position of the leftmost legs) is the fitness function. The following diagram shows the basic scheme of the evolutionary algorithm. 
 
 ![EvAlgo](https://user-images.githubusercontent.com/122245493/221730155-d7553383-cfa0-45ff-8c91-202135178db7.jpg)
