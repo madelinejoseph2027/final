@@ -31,7 +31,8 @@ For computational efficiency, the algorithm is set to evolve 50 generations of c
 The algorithm generates a creature by randomly instantiating a thoracic length of 2 to 5 links. The links' dimensions can range in size from 0.1 to 3.0 units. The algorithm then adds "limbs" into x, y, and z directions. These segments are random in size, but are **bilaterally symmetric** (to mimic most animals), such that if a "limb" exists on one side of the robot, its mirror image exists on the other. Sensors, motors, and synaptic weights are assigned at random based on a coin toss (boolean variable randomly set to 0 or 1).
 
 
-![Body-Brain Diagram](https://user-images.githubusercontent.com/122245493/220243994-f18b9ff8-2993-41eb-a7e1-76335d226b88.jpg)
+![PhenoGenotype_Map](https://user-images.githubusercontent.com/122245493/225149139-97b5f271-38fd-4d1f-a1de-a0d331399d82.png)
+
 
 The diagram above shows an example robot. Green links are sensorized, while blue are unsensorized. Green joints are motorized, while blue are unmotorized (this wouldn't actually be reflected in the output – joints are not colored). Synapses are active if they connect to a sensorized link with a motorized joint. A synapse that connects an unsensorized and/or unmotorized joints is inactive. The mirror plane, which defines the bilateral symmetry of the robot, runs perpendicular to the viewer's line of vision. 
 
@@ -52,7 +53,7 @@ A coin toss determines whether the brain or body of that child is varied. If the
 The child is mutated according to the randomly selected change. The parent and child are then both simulated. Locomotion to the right (measured as average x-position of the leftmost legs) is the fitness function used to select either parent or child for downstream mutation. If the parent is fitter, the child is discarded and the parent remains unmutated for further rounds of spawning. If the child is fitter, it is replaces its parent in the next round of mutation/selection.
 
 
-The following diagram shows the basic scheme of the evolutionary algorithm. 
+The following diagram shows the basic scheme of the evolutionary algorithm: mutate, compete, select, repeat. 
 
 ![EvAlgo](https://user-images.githubusercontent.com/122245493/221730155-d7553383-cfa0-45ff-8c91-202135178db7.jpg)
 
