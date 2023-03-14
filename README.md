@@ -36,7 +36,7 @@ The diagram above shows an example robot. The genotype consists of the random va
 
 
 ## Mutation & Selection
-The algorithm evolves horses optimized for locomotion using the **parallel hillclimber** model. In brief, an initial random parent is generated and then cloned. The cloned child will be mutated in one way. To prevent confounding changes (i.e., combinations of changes whose effects' origin can not be deconvoluted from the multiple changes), **either** the body or brain of the child is mutated. The parent and mutated child are then "competed" against each other based on some metric of fitness. Whichever individual has the superior fitness is preserved for further mutation and competition, while the other is discarded. 
+The algorithm evolves robots optimized for locomotion using the **parallel hillclimber** model. In brief, an initial random parent is generated and then cloned. The cloned child will be mutated in one way. To prevent confounding changes (i.e., combinations of changes whose effects' origin can not be deconvoluted from the multiple changes), **either** the body or brain of the child is mutated. The parent and mutated child are then "competed" against each other based on some metric of fitness. Whichever individual has the superior fitness is preserved for further mutation and competition, while the other is discarded. 
 
 
 *In the Spawn function of ```parallelHillClimber.py```:*
