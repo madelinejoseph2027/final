@@ -16,7 +16,7 @@ python3 search.py
 
 ## Output
 
-The algorithm is set to evolve 100 generations of "horses" from an initial population of 10 random parents. The initial population of parents will be displayed in the pybullet GUI. After the evolution complete, the single best individual will be displayed in the GUI. The number of generations and the population size can be changed in ```constants.py``` as desired.
+For computational efficiency, the algorithm is set to evolve 50 generations of "horses" from an initial population of 1 random parent. The initial parent (generation 0) will be displayed in the pybullet GUI. After the evolution process completes, the single best individual will be displayed in the GUI. The number of generations and the population size can be changed in ```constants.py``` as desired.
 
 
 ## Algorithm Details
