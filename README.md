@@ -83,7 +83,7 @@ The following curves show the results of 5 runs of the evolutionary algorithm. T
 * **In as little as 10 generations, the best evolved creatures were generally so different from the random parents as to look like completely different "species." Qualitatively determining which optimized robots arose from which lineages (specifically, from which initial progenitors) is impossible.**
   * Future work: what are the implications of the disparities in bodies and brains within a single lineage for evolutionary rates using this algorithm?
 
-* **It was standard for evolution to hit a rut when creatures entered fitnesses of around 1.5-2. Fitnesses above 5 were never observed.**
+* **It was standard for evolution to hit a rut when creatures reached fitnesses of around 1.5-2. Fitnesses above 5 were never observed.**
   * To what extent this was a result of the encodings vs. simply a time limitation given the particular constraints placed on the algorithm is unclear. 
 
 * **Overall, bodies and brains evolved in delightfully diverse ways!**
