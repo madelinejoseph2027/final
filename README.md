@@ -68,8 +68,24 @@ The following curves show the results of 5 runs of the evolutionary algorithm. T
 
 ![FitnessCurve](https://user-images.githubusercontent.com/122245493/221730753-45c95812-b2ba-484c-9754-fe268de0dd6c.png)
 
-General observations:
 
+## General observations & Further Considerations
+* An obvious finding: fitness was strongly related to the number of actuated motors. 
+  * In other words, robots with more motors connected to synapses were able to move more. Of course.
+
+* A non-obvious finding: fitness did not strongly relate to body size or shape in isolation.
+  * Regardless of size, robots were favored if they were more motorized. Not so surprising, except that front- or top-heavy robots, which one might think would have a momentum advantage, that had an average number of motorized joints were **substantially** less fit than small and flat robots that were heavily motorized (see the Seal vs. the Handstand Narwhal above).
+
+
+* With 10+ generations, the best creatures were generally so different from the random parents as to look like completely different "species." Qualitatively determining which optimized robots arose from lineages (specifically, from which initial progenitors) is impossible.
+  * Future work: what are the implications of the disparities in bodies and brains within a single lineage for evolutionary rates using this algorithm?
+
+* It was standard for evolution to hit a rut when creatures entered fitnesses of around 1.5-2. Fitnesses above 5 were never observed.
+  * To what extent this was a result of the encodings vs. simply a time limitation given the particular constraints placed on the algorithm is unclear. 
+
+* Overall, bodies and brains evolved in delightfully diverse ways!
+  * Even when the fittest creatures from different evolutionary runs had similar fitness scores, they often looked and were wired very differently!
+  * Future work: if progenitors and fittest progeny can be systemically compared between many (hundreds, thousands) of evolutionary runs, can we more readily determine convergence patterns?
 
 ## Citations
 Bongard, J. [u/DrJosh]. “Education in Evolutionary Robotics” Reddit, 6 Feb. 2023, https://www.reddit.com/r/ludobots/.
