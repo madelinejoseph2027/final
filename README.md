@@ -48,8 +48,8 @@ The parent is cloned to create an identical child.
 A coin toss determines whether the brain or body of that child is varied. If the brain is varied, a secondary coin toss determines if a sensor or synaptic weight is changed. If the body is varied, that secondary coin toss determines if a section is added or removed. 
 
 
-*In the Evolve, Evolve_For_One_Generation, Mutate and Select functions of ```parallelHillClimber.py```:*
-The child is mutated according to the randomly selected change. The parent and child are then both simulated. Locomotion to the right (measured as average x-position of the leftmost legs) is the fitness function used to select either parent or child for downstream mutation. If the parent is fitter, the child is discarded. If the child is fitter, it is added to the list of parents and is cloned in the next round of mutation/selection.
+*In the Evolve, Evolve_For_One_Generation, Mutate, Evaluate, and Select functions of ```parallelHillClimber.py```:*
+The child is mutated according to the randomly selected change. The parent and child are then both simulated. Locomotion to the right (measured as average x-position of the leftmost legs) is the fitness function used to select either parent or child for downstream mutation. If the parent is fitter, the child is discarded and the parent remains unmutated for further rounds of spawning. If the child is fitter, it is replaces its parent in the next round of mutation/selection.
 
 
 The following diagram shows the basic scheme of the evolutionary algorithm. 
