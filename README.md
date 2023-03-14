@@ -11,7 +11,7 @@ This evolutionary process is comprised of a set of pybullet/pyrosim-based functi
 
 ## Usage
 
-Please make sure all of the attending files from this repository are present in your working directory (e.g., by cloning this repo to your local system).
+Please make sure all of the attending files from this repository are present in your working directory (e.g., by cloning this repo to your local system or downloading it as a ZIP file).
 
 Run the following in the command line:
 
@@ -40,12 +40,19 @@ The diagram above shows an example robot. Green links are sensorized, while blue
 The algorithm evolves horses optimized for locomotion using the **parallel hillclimber** model. In brief, an initial random parent is generated and then cloned. The cloned child will be mutated in one way. To prevent confounding changes (i.e., combinations of changes whose effects' origin can not be deconvoluted from the multiple changes), **either** the body or brain of the child is mutated. The parent and mutated child are then "competed" against each other based on some metric of fitness. Whichever individual has the superior fitness is preserved for further mutation and competition, while the other is discarded. 
 
 
+*In the Spawn function of ```parallelHillClimber.py```:*
+The parent is cloned to create an identical child.
+
+
 *In the Mutate function of ```solution.py```:*
-A coin toss determines if the brain or body is varied. If the brain is varied, a secondary coin toss determines if a sensor or synaptic weight is changed. If the body is varied, that secondary coin toss determines if a section is added or removed. 
+A coin toss determines whether the brain or body of that child is varied. If the brain is varied, a secondary coin toss determines if a sensor or synaptic weight is changed. If the body is varied, that secondary coin toss determines if a section is added or removed. 
 
 
-*In the Evolve, Evolve_For_One_Generation, Spawn, Mutate and Select functions of ```parallelHillClimber.py```:*
-Locomotion to the right (measured as average x-position of the leftmost legs) is the fitness function. The following diagram shows the basic scheme of the evolutionary algorithm. 
+*In the Evolve, Evolve_For_One_Generation, Mutate and Select functions of ```parallelHillClimber.py```:*
+The child is mutated according to the randomly selected change. The parent and child are then both simulated. Locomotion to the right (measured as average x-position of the leftmost legs) is the fitness function used to select either parent or child for downstream mutation. If the parent is fitter, the child is discarded. If the child is fitter, it is added to the list of parents and is cloned in the next round of mutation/selection.
+
+
+The following diagram shows the basic scheme of the evolutionary algorithm. 
 
 ![EvAlgo](https://user-images.githubusercontent.com/122245493/221730155-d7553383-cfa0-45ff-8c91-202135178db7.jpg)
 
