@@ -1,7 +1,7 @@
 # THE FINAL
 
 ## In a nutshell
-~Educational~ Video: https://www.youtube.com/watch?v=7oJAp_oXcQE
+"Educational" Video: https://www.youtube.com/watch?v=7oJAp_oXcQE
 
 **Cartoon here**
 
