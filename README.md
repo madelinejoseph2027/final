@@ -55,7 +55,8 @@ The child is mutated according to the randomly selected change so there is **one
 
 The following diagram shows the basic scheme of the evolutionary algorithm: mutate, compete, select, repeat. 
 
-![EvAlgo](https://user-images.githubusercontent.com/122245493/221730155-d7553383-cfa0-45ff-8c91-202135178db7.jpg)
+
+![Mutations+Selection](https://user-images.githubusercontent.com/122245493/225154979-36626450-95ef-4709-b4dd-a05e60dd2591.png)
 
 
 ## Sample Results
