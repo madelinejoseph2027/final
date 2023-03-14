@@ -24,9 +24,9 @@ For computational efficiency, the algorithm is set to evolve 50 generations of c
 
 
 ## Brain/Body Generation
-**Add corresponding code for each part**
-
 This evolutionary process is comprised of a set of pybullet/pyrosim-based functions that evolves a 3-dimensional robot, comprised of randomly sized, sensorized, and motorized rectangular pieces, that is capable of moving away from its point of origin.
+
+**In the constructor, Create_Body, and Create_Brain functions of ```solution.py```:**
 
 The algorithm generates a creature by randomly instantiating a thoracic length of 2 to 5 links. The links' dimensions can range in size from 0.1 to 3.0 units. The algorithm then adds "limbs" into x, y, and z directions. These segments are random in size, but are **bilaterally symmetric** (to mimic most animals), such that if a "limb" exists on one side of the robot, its mirror image exists on the other. Sensors, motors, and synaptic weights are assigned at random based on a coin toss (boolean variable randomly set to 0 or 1).
 
