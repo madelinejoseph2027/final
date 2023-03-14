@@ -68,6 +68,7 @@ The following curves show the results of 5 runs of the evolutionary algorithm. T
 
 ![FitnessCurve](https://user-images.githubusercontent.com/122245493/221730753-45c95812-b2ba-484c-9754-fe268de0dd6c.png)
 
+General observations:
 
 
 ## Citations
