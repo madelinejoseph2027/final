@@ -76,6 +76,9 @@ The following curves show the results of 5 runs of the evolutionary algorithm. T
 * A non-obvious finding: fitness did not strongly relate to body size or shape in isolation.
   * Regardless of size, robots were favored if they were more motorized. Not so surprising, except that front- or top-heavy robots, which one might think would have a momentum advantage, that had an average number of motorized joints were **substantially** less fit than small and flat robots that were heavily motorized (see the Seal vs. the Handstand Narwhal above).
 
+* Movement behavior varied widely, particularly among the fittest creatures.
+  * Many kinds of limbs appeared that allowed the creatures to locomote greater distances – e.g., the oversized front "arms" of the Gorilla and the "strong abs" of the Lobster.
+  * Nonetheless, many modes of locomotion that are common in living animals, such as jumping or even standard quadrupedal running, did not manifest. I suspect this is likely due to some silent/*de facto* constraint resulting from the narrowly-defined fitness function.
 
 * With 10+ generations, the best creatures were generally so different from the random parents as to look like completely different "species." Qualitatively determining which optimized robots arose from lineages (specifically, from which initial progenitors) is impossible.
   * Future work: what are the implications of the disparities in bodies and brains within a single lineage for evolutionary rates using this algorithm?
