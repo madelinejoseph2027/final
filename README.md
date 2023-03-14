@@ -20,6 +20,8 @@ python3 search.py
 
 For computational efficiency, the algorithm is set to evolve 50 generations of "horses" from an initial population of 1 random parent. The initial parent (generation 0) will be displayed in the pybullet GUI. After the evolution process completes, the single best individual will be displayed in the GUI. The number of generations and the population size can be changed in ```constants.py``` as desired.
 
+**The text file "BestFitnesses.txt" contains a comma-separated list of the fitnesses of the best individual in a population for each generation.**
+
 
 ## Algorithm Details
 **Add corresponding code for each part**
