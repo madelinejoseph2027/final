@@ -64,7 +64,6 @@ A selection of 4 unevolved vs. 4 evolved robots:
 ![MJ_FinalTrailer](https://user-images.githubusercontent.com/122245493/225088909-6dc0739b-2c02-40d6-b38b-9bcea8ea876c.gif)
 
 
-
 The following curves show the results of 5 runs of the evolutionary algorithm. This plot represents 100 generations of populations of 10 individuals which were evolved and competed. The diagram tracks the fitness of the best individual of the 10 across those 100 generations. 
 
 ![FitnessCurve](https://user-images.githubusercontent.com/122245493/221730753-45c95812-b2ba-484c-9754-fe268de0dd6c.png)
