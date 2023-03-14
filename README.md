@@ -1,6 +1,6 @@
 # THE FINAL
 
-## In a nutshell
+## In a Nutshell
 
 This evolutionary process is comprised of a set of pybullet/pyrosim-based functions that evolves a 3-dimensional robot, comprised of randomly sized, sensorized, and motorized rectangular pieces, that is capable of moving away from its point of origin.
 
