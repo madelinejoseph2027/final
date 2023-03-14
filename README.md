@@ -6,8 +6,6 @@ This evolutionary process is comprised of a set of pybullet/pyrosim-based functi
 
 "Educational" Video: https://www.youtube.com/watch?v=7oJAp_oXcQE
 
-**Cartoon here**
-
 
 ## Usage
 
