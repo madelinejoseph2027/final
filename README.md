@@ -1,6 +1,26 @@
-# hillClimbingHorse
+# THE FINAL
 
-## Background
+## In a nutshell
+**Cartoon here**
+
+
+## Usage
+
+Please make sure all of the attending files from this repository are present in your working directory (e.g., by cloning this repo to your local system).
+
+Run the following in the command line:
+
+```bash
+python3 search.py
+```
+
+## Output
+
+The algorithm is set to evolve 100 generations of "horses" from an initial population of 10 random parents. The initial population of parents will be displayed in the pybullet GUI. After the evolution complete, the single best individual will be displayed in the GUI. The number of generations and the population size can be changed in ```constants.py``` as desired.
+
+
+## Algorithm Details
+**Add corresponding code for each part**
 
 The hillClimbingHorse is a set of pybullet/pyrosim-based functions that evolves a 3-dimensional robot, comprised of randomly sized, sensorized, and motorized rectangular pieces, that moves to the right.
 
@@ -16,25 +36,14 @@ The algorithm evolves horses optimized for locomotion using the parallel hillcli
 ![EvAlgo](https://user-images.githubusercontent.com/122245493/221730155-d7553383-cfa0-45ff-8c91-202135178db7.jpg)
 
 
+## Results
+
 The curves below show the results of 5 runs of the evolutionary algorithm. For 100 generations, populations of 10 individuals were evolved and competed. The diagram tracks the fitness of the best individual of the 10 across those 100 generations. 
 
 ![FitnessCurve](https://user-images.githubusercontent.com/122245493/221730753-45c95812-b2ba-484c-9754-fe268de0dd6c.png)
 
 
-## Usage
-
-Please make sure all of the attending files from this repository are present in your working directory (e.g., by cloning this repo to your local system).
-
-Run the following in the command line:
-
-```bash
-python3 search.py
-```
-
-
-## Output
-
-The algorithm is set to evolve 100 generations of "horses" from an initial population of 10 random parents. The initial population of parents will be displayed in the pybullet GUI. After the evolution complete, the single best individual will be displayed in the GUI. The number of generations and the population size can be changed in ```constants.py``` as desired. 
+ 
 
 
 ## Citations
