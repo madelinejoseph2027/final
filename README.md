@@ -71,7 +71,7 @@ The following curves show the results of 5 runs of the evolutionary algorithm. T
 
 ## General observations & Further Considerations
 * **An obvious finding: fitness was strongly related to the number of actuated motors.** 
-  * In other words, robots with more motors connected to synapses were able to move more. Of course.
+  * In other words, robots with more motors connected to synapses were able to move farther. Of course.
 
 * **A non-obvious finding: fitness did not strongly relate to body size or shape in isolation.**
   * Regardless of size, robots were favored if they were more motorized. Not so surprising, except that front- or top-heavy robots, which one might think would have a momentum advantage, that had an average number of motorized joints were **substantially** less fit than small and flat robots that were heavily motorized (see the Seal vs. the Handstand Narwhal above).
